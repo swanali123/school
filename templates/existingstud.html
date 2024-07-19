@@ -1,0 +1,28 @@
+<html>
+    {% include "base.html" %}
+    <center><h1>{{title}}</h1></center>
+    <table align="center" border=2>
+        <thead>
+            <tr>
+                <td>S.No</td>
+                <td>NAME</td>
+                <td>CLASS</td>
+                <td>ADDRESS</td>
+                <td>SCHOOL</td>
+                <td>E-MAIL</td>
+            </tr>
+        </thead>
+        {% for x in queryset %}
+        <tbody>
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{ x.s_name}}</td>
+                <td>{{ x.s_class }}</td>
+                <td>{{ x.s_addr }}</td>
+                <td>{{ x.s_school}}</td>
+                <td>{{ x.s_email}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</html>

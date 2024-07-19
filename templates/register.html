@@ -1,0 +1,27 @@
+<html>
+    {% include "base.html" %}
+    <center><h1>{{title}}</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Register</button>
+
+    </form>
+    </center>
+</html>
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    {% include "base.html" %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
+-->
